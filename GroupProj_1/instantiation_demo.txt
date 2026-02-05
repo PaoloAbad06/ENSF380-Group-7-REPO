@@ -3,10 +3,12 @@ name: "Teruya"
 patientID: 506085
 facility: Facility(1)
 date_of_birth: "2021-01-19"
+age: 5
 height: 43
 weight: 38
 appearance: "Black hair, brown eyes. He is alert but quiet, 
             and speaks French and Japanese."
+careRecord: CareRecord(1)
 isVolunteering: False
 isChild: True 
 Volunteer: null
