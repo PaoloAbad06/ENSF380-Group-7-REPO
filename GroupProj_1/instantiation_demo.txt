@@ -1,11 +1,12 @@
 Patient(1)
-name: Teruya
+name: "Teruya"
+patientID: 506085
 facility: Facility(1)
-age: 5
+date_of_birth: "2021-01-19"
 height: 43
 weight: 38
-appearance: Black hair, brown eyes. He is alert but quiet, 
-            and speaks French and Japanese.
+appearance: "Black hair, brown eyes. He is alert but quiet, 
+            and speaks French and Japanese."
 isVolunteering: False
 isChild: True 
 Volunteer: null
@@ -13,10 +14,78 @@ Child: Child(1)
 relatives: Relative(1), Relative(2), Relative(3), Relative(4)
 
 Facility(1)
-address: 136 8 Ave
+address: "136 8 Ave SE"
 patients: Patient(1)
 volunteers: Volunteer(1), Volunteer(2)
 staff: Staff(1), Staff(2), Staff(3)
-name: TELUS Convention Centre
+name: "TELUS Convention Centre"
 capacity: 50
 currentOccupancy: 16
+phoneNumber: "403-261-8500"
+availableSupplies: Supply(1)
+careRecords: CareRecord(1)
+
+Volunteer(1)
+volunteerID: 101555
+
+Volunteer(2)
+volunteerID: 101896
+
+Staff(1)
+staffID: 201659
+staffName: "Youssef Ibrahim"
+staffRole: "Supply Management"
+
+Staff(2)
+staffID: 201782
+staffName: "Himaal Ishaq"
+staffRole: "Communications"
+
+Staff(3)
+staffID: 201562
+staffName: "Paolo Abad"
+staffRole: "Patient Services"
+
+Supply(1)
+type: Toiletries
+amountAvailable: 60
+
+CareRecord(1)
+patientID: 506085
+worker: SocialWorker(1)
+wasSupplied: Supply(1)
+recordID: 302895
+description: "Was found with a broken arm and taken to the centre, where he was treated
+              has been assigned a social worker (#2891)"
+careDate: "2025-01-18"
+facility: Facility(1)
+
+SocialWorker(1)
+workerID: 2891
+assignedChildren: Child(1)
+assignedFacility: Facility(1)
+
+Child(1)
+socialWorkerID: 2891
+
+Relative(1)
+name: "Freda McDonald"
+patientRelation: "Mother"
+
+Relative(2)
+name: "Jo Bouillon"
+patientRelation: "Father"
+
+Relative(3)
+name: "Jari Bouillon"
+patientRelation: "Sibling"
+
+Relative(4)
+name: "Luis Bouillon"
+patientRelation: "Sibling"
+
+ContactLog(1)
+logID: 407598
+contactDate: "2025-01-18"
+callerName: "Freda McDonald"
+contactSummary: "Looking for her children, Teruya, Jari, and Luis Bouillon."
