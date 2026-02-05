@@ -1,0 +1,22 @@
+Patient(1)
+name: Teruya
+facility: Facility(1)
+age: 5
+height: 43
+weight: 38
+appearance: Black hair, brown eyes. He is alert but quiet, 
+            and speaks French and Japanese.
+isVolunteering: False
+isChild: True 
+Volunteer: null
+Child: Child(1)
+relatives: Relative(1), Relative(2), Relative(3), Relative(4)
+
+Facility(1)
+address: 136 8 Ave
+patients: Patient(1)
+volunteers: Volunteer(1), Volunteer(2)
+staff: Staff(1), Staff(2), Staff(3)
+name: TELUS Convention Centre
+capacity: 50
+currentOccupancy: 16
