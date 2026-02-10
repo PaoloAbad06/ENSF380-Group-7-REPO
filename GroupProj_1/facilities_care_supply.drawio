@@ -1,0 +1,58 @@
+<mxfile host="65bd71144e">
+    <diagram id="eWSMvLo1WmsUqWjM1zmq" name="Page-1">
+        <mxGraphModel dx="461" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Facility" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="19" y="30" width="271" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="- address: String&lt;div&gt;- patients: Patient[]&lt;/div&gt;&lt;div&gt;- volunteers: Volunteer[]&lt;/div&gt;&lt;div&gt;- staff: Staff[]&lt;/div&gt;&lt;div&gt;- name: String&lt;/div&gt;&lt;div&gt;- capacity: int&lt;/div&gt;&lt;div&gt;- currentOccupancy: int&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- phoneNumber: String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- availableSupplies: Supply[]&lt;/div&gt;&lt;div&gt;- careRecords: CareRecord[]&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="2" vertex="1">
+                    <mxGeometry y="26" width="271" height="154" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="2" vertex="1">
+                    <mxGeometry y="180" width="271" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="+ Facility()&lt;div&gt;+ Facility(address:String, patients:Patient[], volunteers:Volunteer[], staff:Staff[], name:String, capacity:Int, currentOccupancy:int, phoneNumber:String, availableSupplies:Supply[], careRecords:CareRecord[])&lt;/div&gt;&lt;div&gt;+ setAddress(address:String)&lt;/div&gt;&lt;div&gt;+ getAddress() : String&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ setName(address:String)&lt;/div&gt;&lt;div&gt;+ getName() : String&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ getCapacity() : int&lt;/div&gt;&lt;div&gt;+ setCapacity(capacity:int)&lt;/div&gt;&lt;div&gt;+ getPeople() : Patient[]&lt;/div&gt;&lt;div&gt;+ setPeople(people:Patient[])&lt;/div&gt;&lt;div&gt;+ getCurrentOccupancy() : int&lt;/div&gt;&lt;div&gt;+ getPhoneNumber() : String&lt;/div&gt;&lt;div&gt;+ setPhoneNumber(phone:String)&lt;/div&gt;&lt;div&gt;+ setCareRecords(careRecords:careRecord[]&lt;/div&gt;&lt;div&gt;+ getCareRecords() : CareRecord[]&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ addCareRecord(careRecord:CareRecord)&lt;/div&gt;&lt;div&gt;+ removeCareRecord(careRecord:CareRecord)&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ addPatient(person:Patient)&lt;/div&gt;&lt;div&gt;+ removePatient(person:Patient)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="2" vertex="1">
+                    <mxGeometry y="188" width="271" height="392" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="ReliefService" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="1450" width="160" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="- address: String&lt;div&gt;- people: Person[]&lt;/div&gt;&lt;div&gt;- name: String&lt;/div&gt;&lt;div&gt;- maxCapacity: int&lt;/div&gt;&lt;div&gt;- currentPeople: int&lt;/div&gt;&lt;div&gt;- asd&lt;/div&gt;&lt;div&gt;- asd&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="6" vertex="1">
+                    <mxGeometry y="26" width="160" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="6" vertex="1">
+                    <mxGeometry y="130" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="6" vertex="1">
+                    <mxGeometry y="138" width="160" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Supply" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="559" y="30" width="250" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;div&gt;- type: String&lt;/div&gt;&lt;div&gt;- amountAvailable: int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="10" vertex="1">
+                    <mxGeometry y="26" width="250" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="10" vertex="1">
+                    <mxGeometry y="100" width="250" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;div&gt;+ Supply()&lt;/div&gt;&lt;div&gt;+ Supply(type:String, amountAvilable:int)&lt;/div&gt;+ getType : String&lt;div&gt;+ setType(type:String)&lt;/div&gt;&lt;div&gt;+ getAmountAvailable() : int&lt;/div&gt;&lt;div&gt;+ setAmountAvailable(amountAvailable:int)&lt;/div&gt;&lt;div&gt;+ giveSupply(amount:int, person:Patient)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="10" vertex="1">
+                    <mxGeometry y="108" width="250" height="152" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="CareRecord" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="30" width="220" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;div&gt;- patient: Patient&lt;/div&gt;&lt;div&gt;- worker: SocialWorker&lt;/div&gt;&lt;div&gt;- wasSupplied: Supply&lt;/div&gt;&lt;div&gt;- recordID: int&lt;/div&gt;&lt;div&gt;- description: String&lt;/div&gt;&lt;div&gt;- careDate: String&lt;/div&gt;&lt;div&gt;- facility: Facility&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="14" vertex="1">
+                    <mxGeometry y="26" width="220" height="144" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="14" vertex="1">
+                    <mxGeometry y="170" width="220" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="+ CareRecord()&lt;div&gt;+ CareRecord(patient:Patient, worker:SocialWorker, wasSupplied:Supply, recordID: int, description:String, careDate:String, facility:Facility)&lt;/div&gt;&lt;div&gt;+ getPatient() : Patient&lt;/div&gt;&lt;div&gt;+ setPatient(patient:Patient)&lt;/div&gt;&lt;div&gt;+ getWorker() : SocialWorker&lt;/div&gt;&lt;div&gt;+ setWorker(worker:&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;SocialWorker)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ getCareDate() : String&lt;/div&gt;&lt;div&gt;+ setCareDate(careDate:String)&lt;/div&gt;&lt;div&gt;+ getFacility() : Facility&lt;/div&gt;&lt;div&gt;+ setFacility(facility:Facility)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="14" vertex="1">
+                    <mxGeometry y="178" width="220" height="242" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
