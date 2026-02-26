@@ -99,25 +99,28 @@ public class DisasterVictim {
     }
 
     public void setGender(String gender) {
-        if (gender.equalsIgnoreCase("PLEASE SPECIFY")) {
+        if (gender.equalsIgnoreCase("Please specify")) {
             this.gender = gender;
             return;
         }
-        if (gender.equals("Two-Spirit")) {
+        if (this.gender != null && this.gender.equalsIgnoreCase("Please specify")) {
             this.gender = gender;
             return;
         }
-        gender = gender.substring(0,1).toUpperCase() + gender.substring(1).toLowerCase();
+
+        String formatted_gender = gender.substring(0,1).toUpperCase() + gender.substring(1).toLowerCase();
+
+        if (!formatted_gender.equals("Man") && !formatted_gender.equals("Woman") && !formatted_gender.equals("Boy") && !formatted_gender.equals("Girl")) {
+            throw new IllegalArgumentException();
+        }
+
         if (dateOfBirth != null) {
             Period period = Period.between(dateOfBirth, LocalDate.now());
-            if (period.getYears() < 18 && (gender.equals("Man") || gender.equals("Woman"))) {
+            if (period.getYears() < 18 && (formatted_gender.equals("Man") || formatted_gender.equals("Woman"))) {
                 throw new IllegalArgumentException();
             }
         }
-        if (gender.equalsIgnoreCase("invalidgender")) {
-            throw new IllegalArgumentException();
-        }
-        this.gender = gender;
+        this.gender = formatted_gender;
     }
 
     // METHODS (IN PROGRESS ****)
