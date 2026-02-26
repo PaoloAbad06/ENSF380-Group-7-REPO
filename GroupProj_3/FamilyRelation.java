@@ -1,4 +1,4 @@
-package src.edu.ucalgary.oop;
+package edu.ucalgary.oop;
 
 public class FamilyRelation {
     /**
@@ -31,7 +31,7 @@ public class FamilyRelation {
         this.personOne = personOne;
     }
 
-    public String getRelationShipTo() {
+    public String getRelationshipTo() {
         return relationshipTo;
     }
 

@@ -1,11 +1,11 @@
-package src.edu.ucalgary.oop;
+package edu.ucalgary.oop;
 
 import java.time.LocalDate;
 
 public class MedicalRecord {
     private Location location;
     private String treatmentDetails;
-    private LocalDate dateOfTreatment
+    private LocalDate dateOfTreatment;
 
     // CONSTRUCTOR
     public MedicalRecord(Location location, String treatmentDetails, LocalDate dateOfTreatment) {
@@ -35,6 +35,9 @@ public class MedicalRecord {
     }
 
     public void setDateOfTreatment(LocalDate dateOfTreatment) {
+        if (dateOfTreatment == null || dateOfTreatment.isAfter(LocalDate.now()) ) {
+            throw new IllegalArgumentException();
+        }
         this.dateOfTreatment = dateOfTreatment;
     }
 

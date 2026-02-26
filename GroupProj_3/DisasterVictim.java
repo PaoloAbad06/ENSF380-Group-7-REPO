@@ -1,6 +1,7 @@
-package src.edu.ucalgary.oop;
+package edu.ucalgary.oop;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Arrays;
 
 public class DisasterVictim {
@@ -10,9 +11,9 @@ public class DisasterVictim {
     private String firstName;
     private String lastName;
     private LocalDate dateOfBirth;
-    private FamilyRelation[] familyConnections;
-    private MedicalRecord[] medicalRecords;
-    private Supply[] personalBelongings;
+    private FamilyRelation[] familyConnections = new FamilyRelation[0];
+    private MedicalRecord[] medicalRecords = new MedicalRecord[0];
+    private Supply[] personalBelongings = new Supply[0];
     private LocalDate ENTRY_DATE;
     private String gender;
     private String comments;
@@ -98,6 +99,24 @@ public class DisasterVictim {
     }
 
     public void setGender(String gender) {
+        if (gender.equalsIgnoreCase("PLEASE SPECIFY")) {
+            this.gender = gender;
+            return;
+        }
+        if (gender.equals("Two-Spirit")) {
+            this.gender = gender;
+            return;
+        }
+        gender = gender.substring(0,1).toUpperCase() + gender.substring(1).toLowerCase();
+        if (dateOfBirth != null) {
+            Period period = Period.between(dateOfBirth, LocalDate.now());
+            if (period.getYears() < 18 && (gender.equals("Man") || gender.equals("Woman"))) {
+                throw new IllegalArgumentException();
+            }
+        }
+        if (gender.equalsIgnoreCase("invalidgender")) {
+            throw new IllegalArgumentException();
+        }
         this.gender = gender;
     }
 
@@ -109,28 +128,61 @@ public class DisasterVictim {
 
     public void removePersonalBelonging(Supply belonging) {
         int index = -1;
-        for (int i = 0; i < personalBelongings.length - 1; i++) {
-            if (personalBelongings[i] == belonging)
+        for (int i = 0; i < personalBelongings.length; i++) {
+            if (personalBelongings[i] == belonging) {
                 index = i;
-            
+                break;
+            }
         }
+        if (index == -1) {
+            throw new IllegalArgumentException();
+        }
+        Supply[] newArray = new Supply[personalBelongings.length - 1];
+        int newIndex = 0;
+        for (int i = 0; i < this.personalBelongings.length; i++) {
+            if (i == index) {
+                continue;
+            }
+            newArray[newIndex] = this.personalBelongings[i];
+            newIndex++;
+        }
+        this.personalBelongings = newArray;
     }
 
     public void addFamilyConnection(FamilyRelation connection) {
         // creates NEW array with size of +1 length of original, copies all original elems
         // new array becomes objects familyConnections
         familyConnections = Arrays.copyOf(familyConnections, familyConnections.length + 1);
-        familyConnections[familyConnection.length - 1] = connection;
+        familyConnections[familyConnections.length - 1] = connection;
 
         // OLD array discarded
     }
 
     public void removeFamilyConnection(FamilyRelation connection) {
-        // IN PROGRESS ****
+        int index = -1;
+        for (int i = 0; i < familyConnections.length; i++) {
+            if (familyConnections[i] == connection) {
+                index = i;
+                break;
+            }
+        }
+        if (index == -1) {
+            throw new IllegalArgumentException();
+        }
+        FamilyRelation[] newArray = new FamilyRelation[familyConnections.length - 1];
+        int newIndex = 0;
+        for (int i = 0; i < this.familyConnections.length; i++) {
+            if (i == index) {
+                continue;
+            }
+            newArray[newIndex] = this.familyConnections[i];
+            newIndex++;
+        }
+        this.familyConnections = newArray;
     }
 
     public void addMedicalRecord(MedicalRecord Record) {
         medicalRecords = Arrays.copyOf(medicalRecords, medicalRecords.length + 1);
-        medicalRecords[medicalRecords.length - 1] = medicalRecords;
+        medicalRecords[medicalRecords.length - 1] = Record;
     }
 }
