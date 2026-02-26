@@ -74,9 +74,10 @@ public class ReliefService {
     
     public String getLogDetails()
     {
-    	return "Inquirer: " + inquirer.getFirstName() + ", Missing Person: " + missingPerson.getFirstName() + " " 
+    	return "Inquirer: " + inquirer.getFirstName() + ", Missing Person: " + missingPerson.getFirstName() 
     	+ ", Date of Inquiry: " + dateOfInquiry + ", Info Provided: " + infoProvided + ", Last Known Location: " 
         + lastKnownLocation.getName();
     }
 }
+
 
